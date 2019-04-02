@@ -1,0 +1,14 @@
+
+server:
+  port: 7500
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/WuMenghao/clouddemo
+          username: WuMenghao
+          password: tmwmh023328
+          search-paths: ../config
