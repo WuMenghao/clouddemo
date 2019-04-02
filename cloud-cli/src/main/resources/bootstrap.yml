@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: hello-service
+  cloud:
+    config:
+      uri: http://localhost:7500/
+      profile: dev
+      discovery:
+        enabled: true
+        service-id: config-server
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/,http://localhost:1112/eureka/
