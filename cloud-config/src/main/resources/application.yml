@@ -8,7 +8,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/WuMenghao/clouddemo
+          uri: https://github.com/WuMenghao/clouddemo/
           username: WuMenghao
           password: tmwmh023328
-          search-paths: ../config
+          search-paths: config
