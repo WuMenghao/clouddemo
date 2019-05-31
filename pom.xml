@@ -21,6 +21,7 @@
         <module>cloud-service</module>
         <module>cloud-loadbalance</module>
         <module>cloud-config</module>
+        <module>cloud-routing</module>
     </modules>
 
     <properties>
