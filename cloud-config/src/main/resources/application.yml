@@ -13,6 +13,7 @@ spring:
           password: tmwmh023328
           search-paths: config
           clone-on-start: true
+          timeout: 60
 eureka:
   client:
     serviceUrl:
