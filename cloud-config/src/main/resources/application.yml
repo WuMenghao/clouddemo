@@ -14,6 +14,7 @@ spring:
           search-paths: config
           clone-on-start: true
           timeout: 60
+#          basedir: D:/data/clould-config-repo #git本地仓库位置
 eureka:
   client:
     serviceUrl:
