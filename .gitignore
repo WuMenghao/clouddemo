@@ -1,5 +1,6 @@
 */target/
 !.mvn/wrapper/maven-wrapper.jar
+.mvn/
 
 ### STS ###
 .apt_generated
@@ -37,3 +38,5 @@ cloud-loadbalance/mvnw.cmd
 cloud-service/.mvn/
 cloud-service/mvnw
 cloud-service/mvnw.cmd
+*/mvnw
+*/mvnw.cmd
