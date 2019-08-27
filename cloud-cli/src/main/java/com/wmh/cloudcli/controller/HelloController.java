@@ -12,7 +12,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
 @RestController
-public class HellowController {
+public class HelloController {
 
     private final Logger logger =LoggerFactory.getLogger(getClass());
 
