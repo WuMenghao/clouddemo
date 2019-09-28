@@ -1,5 +1,6 @@
 package com.wmh.cloudcli.controller;
 
+import com.wmh.cloudservice.api.HelloService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cloud.client.ServiceInstance;
@@ -18,8 +19,10 @@ public class HelloController {
 
     @Resource
     private DiscoveryClient client;
+    @Resource
+    private HelloService helloService;
 
-    @RequestMapping(value="/hello",method=RequestMethod.GET)
+    @RequestMapping(value="/index",method=RequestMethod.GET)
     public String index(HttpServletRequest request){
         ServiceInstance instance=client.getInstances(client.getServices().get(0)).get(0);
         logger.info("/hello, host: {} , service_id: {}",instance.getHost(),instance.getServiceId());
@@ -27,5 +30,10 @@ public class HelloController {
                 "<p>service_id:"+instance.getServiceId()+"</p>" +
                 "<p>host:"+request.getLocalName()+"</p>" +
                 "<p>port:"+request.getLocalPort()+"</p>";
+    }
+
+    @RequestMapping(value = "/hello",method = RequestMethod.GET)
+    public String Hello(){
+        return helloService.hello();
     }
 }

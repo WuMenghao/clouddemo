@@ -1,10 +1,9 @@
-package com.wmh.cloudservice.service;
+package com.wmh.cloudservice.api;
 
-import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@FeignClient("hello-service")
+@RequestMapping
 public interface HelloService {
 
     @GetMapping("hello")

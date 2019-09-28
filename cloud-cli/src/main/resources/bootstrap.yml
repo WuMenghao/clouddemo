@@ -1,6 +1,6 @@
 spring:
   application:
-    name: hello-service
+    name: hello-cli
   cloud:
     config:
       uri: http://localhost:7500/

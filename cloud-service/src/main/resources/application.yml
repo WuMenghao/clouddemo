@@ -1,5 +1,8 @@
 server:
   port: 2900
+spring:
+  application:
+    name: hello-service
 eureka:
   client:
     serviceUrl:
