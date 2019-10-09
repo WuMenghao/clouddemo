@@ -3,6 +3,7 @@ package com.wmh.cloudcli.controller;
 import com.wmh.cloudservice.api.HelloService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,13 +14,14 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
 @RestController
+@RequestMapping("/web")
 public class HelloController {
 
     private final Logger logger =LoggerFactory.getLogger(getClass());
 
-    @Resource
+    @Autowired
     private DiscoveryClient client;
-    @Resource
+    @Autowired
     private HelloService helloService;
 
     @RequestMapping(value="/index",method=RequestMethod.GET)

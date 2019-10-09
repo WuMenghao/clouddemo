@@ -1,9 +1,11 @@
 package com.wmh.cloudservice.service.impl;
 
 
-import com.wmh.cloudservice.service.IHelloService;
+import com.wmh.cloudservice.api.HelloService;
+import org.springframework.stereotype.Service;
 
-public class HelloServiceImpl implements IHelloService {
+@Service
+public class HelloServiceImpl implements HelloService {
     @Override
     public String hello() {
         return "hello";
