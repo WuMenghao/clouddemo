@@ -13,8 +13,13 @@ public class ConsumerController {
     @Resource
     private RestTemplate restTemplate;
 
-    @RequestMapping(value="/ribbon",method=RequestMethod.GET)
+    @RequestMapping(value="/hello",method=RequestMethod.GET)
     public String helloConsumer(){
-        return restTemplate.getForEntity("http://HELLO-SERVICE/hello",String.class).getBody();
+        return restTemplate.getForEntity("http://HELLO-CLI/web/hello",String.class).getBody();
+    }
+
+    @RequestMapping(value="/index",method=RequestMethod.GET)
+    public String indexConsumer(){
+        return restTemplate.getForEntity("http://HELLO-CLI/web/index",String.class).getBody();
     }
 }
